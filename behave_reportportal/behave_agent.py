@@ -41,6 +41,7 @@ def create_rp_service(cfg):
             token=cfg.token,
             is_skipped_an_issue=cfg.is_skipped_an_issue,
             retries=cfg.retries,
+            verify_ssl=cfg.verify_ssl
         )
 
 

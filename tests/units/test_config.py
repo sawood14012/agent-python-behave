@@ -79,6 +79,7 @@ def test_read_config_from_cmd(mock_cp):
             "retries": 3,
             "rerun": "True",
             "rerun_of": "launch_id",
+            "verify_ssl": "False",
         }
     )
     cfg = read_config(mock_context)
@@ -94,6 +95,7 @@ def test_read_config_from_cmd(mock_cp):
     expect(cfg.rerun is True)
     expect(cfg.rerun_of == "launch_id")
     expect(cfg.enabled is True)
+    expect(cfg.verify_ssl is False)
     assert_expectations()
 
 

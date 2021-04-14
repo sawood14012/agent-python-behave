@@ -169,6 +169,7 @@ def test_create_rp_service_init(mock_rps):
                 project="C",
                 is_skipped_an_issue=False,
                 retries=None,
+                verify_ssl=None,
             )
         ],
         any_order=True,

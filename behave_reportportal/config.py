@@ -23,6 +23,7 @@ class Config(object):
         retries=None,
         rerun=None,
         rerun_of=None,
+        verify_ssl=None,
         **kwargs
     ):
         """Initialize instance attributes."""
@@ -40,6 +41,8 @@ class Config(object):
         self.retries = retries and int(retries)
         self.rerun = get_bool(rerun) or False
         self.rerun_of = rerun_of
+        self.verify_ssl = get_bool(verify_ssl)
+        
 
 
 def read_config(context):
